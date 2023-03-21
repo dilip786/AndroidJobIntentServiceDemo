@@ -17,7 +17,7 @@ class MyJobIntentService : JobIntentService() {
     private var randomNumber:Int? =null
     override fun onHandleWork(intent: Intent) {
         Log.e(TAG, "onStartCommand() called ${intent?.getStringExtra("myKey")?:"NO DATA"}")
-        for (i in 1..1000){
+        for (i in 1..10){
             Thread.sleep(1000)
             randomNumber = Random().nextInt(10000)
             Log.e(TAG, "RandomNumber: $randomNumber")

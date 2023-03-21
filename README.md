@@ -14,3 +14,9 @@ This is a demo app on how to implement JobIntentService.
 * We can use broadcast receiver to communicate/pass the data between them.
 * We can also use iBinder, Livedata, RoomDb.
 
+### How to stop service.
+
+* To stop a running JobIntentService, you can call the JobIntentService.stopSelf() method within the onHandleWork() method. This will stop the service as soon as all work has been completed.
+* JobIntentService may or may not be automatically started again after a certain time if the task is not finished and the app is killed.
+
+

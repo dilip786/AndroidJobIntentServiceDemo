@@ -14,6 +14,11 @@ This is a demo app on how to implement JobIntentService.
 * We can use broadcast receiver to communicate/pass the data between them.
 * We can also use iBinder, Livedata, RoomDb.
 
+### How to start service
+
+```
+MyJobIntentService.enqueueWork(this, Intent(this, MyJobIntentService::class.java))
+```
 ### How to stop service.
 
 * To stop a running JobIntentService, you can call the JobIntentService.stopSelf() method within the onHandleWork() method. This will stop the service as soon as all work has been completed.
